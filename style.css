@@ -130,7 +130,7 @@ ul {
 .btn {
   cursor: pointer;
   color: var(--white);
-  background: var(--primary-500);
+  background: #ac1c1c;
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -313,7 +313,7 @@ Navbar
 }
 
 .nav-link:hover{
-    color: #645cff;
+    color: #ac1c1c;
 }
 
 .contact-link a{
@@ -469,7 +469,7 @@ Recipes
 }
 
 .tags-list a:hover{
-    color: #645cff;
+    color: #ac1c1c;
 }
 
 .recipe{
@@ -484,7 +484,7 @@ Recipes
 .recipe h5{
     margin-bottom: 0;
     line-height: 1;
-    color: #3c3799;
+    color: #ac1c1c;
 }
 .recipe p{
     margin-bottom: 0;
@@ -524,7 +524,7 @@ Recipes
 }
 @media screen and (min-width: 1200px) {
     .recipe h5{
-        font-size: 1.15rem;
+        font-size: 2rem;
     }
     .recipes-list {
         grid-template-columns: 1fr 1fr 1fr;
@@ -627,7 +627,7 @@ Single Recipe Page
 
 .recipe-icons i {
     font-size: 1.5rem;
-    color: var(--primary-500);
+    color: #ac1c1c;
 }
 
 .recipe-icons h5, 
@@ -670,7 +670,7 @@ Single Recipe Page
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0;
-  color: var(--primary-500);
+  color: #ac1c1c;
 }
 
 .single instruction > p {
