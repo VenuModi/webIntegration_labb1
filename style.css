@@ -6,41 +6,28 @@
 /* fonts */
 :root {
   /* colors */
-  --primary-100: #e2e0ff;
-  --primary-200: #c1beff;
-  --primary-300: #a29dff;
-  --primary-400: #837dff;
-  --primary-500: #645cff;
-  --primary-600: #504acc;
-  --primary-700: #3c3799;
-  --primary-800: #282566;
-  --primary-900: #141233;
+  --primary-100: #645cff;
 
   /* grey */
-  --grey-50: #f8fafc;
-  --grey-100: #f1f5f9;
+  --grey-100: #f8fafc;
   --grey-200: #e2e8f0;
   --grey-300: #cbd5e1;
   --grey-400: #94a3b8;
   --grey-500: #64748b;
   --grey-600: #475569;
   --grey-700: #334155;
-  --grey-800: #1e293b;
   --grey-900: #0f172a;
   /* rest of the colors */
   --black: #222;
   --white: #fff;
-  --red-light: #f8d7da;
-  --red-dark: #842029;
-  --green-light: #d1e7dd;
-  --green-dark: #0f5132;
+  --red-dark: #ac1c1c;
 
   /* fonts  */
   --headingFont: 'Roboto', sans-serif;
   --bodyFont: 'Nunito', sans-serif;
   --smallText: 0.7em;
   /* rest of the vars */
-  --backgroundColor: var(--grey-50);
+  --backgroundColor: var(--grey-100);
   --textColor: var(--grey-900);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
@@ -52,10 +39,6 @@
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 body {
@@ -130,7 +113,7 @@ ul {
 .btn {
   cursor: pointer;
   color: var(--white);
-  background: #ac1c1c;
+  background: var(--red-dark);
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -140,18 +123,8 @@ ul {
   text-transform: capitalize;
   display: inline-block;
 }
-.btn:hover {
-  background: var(--primary-700);
-  box-shadow: var(--shadow-3);
-}
-.btn-hipster {
-  color: var(--primary-500);
-  background: var(--primary-200);
-}
-.btn-hipster:hover {
-  color: var(--primary-200);
-  background: var(--primary-700);
-}
+
+
 .btn-block {
   width: 100%;
 }
@@ -164,14 +137,6 @@ ul {
   border-radius: var(--borderRadius);
 }
 
-.alert-danger {
-  color: var(--red-dark);
-  background: var(--red-light);
-}
-.alert-success {
-  color: var(--green-dark);
-  background: var(--green-light);
-}
 /* form */
 
 .form {
@@ -206,47 +171,14 @@ ul {
 .form-textarea {
   height: 7rem;
 }
-::placeholder {
-  font-family: inherit;
-  color: var(--grey-400);
-}
-.form-alert {
-  color: var(--red-dark);
-  letter-spacing: var(--letterSpacing);
-  text-transform: capitalize;
-}
-/* alert */
 
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loading {
-  width: 6rem;
-  height: 6rem;
-  border: 5px solid var(--grey-400);
-  border-radius: 50%;
-  border-top-color: var(--primary-500);
-  animation: spinner 0.6s linear infinite;
-}
-.loading {
-  margin: 0 auto;
-}
 /* title */
 
 .title {
   text-align: center;
 }
 
-.title-underline {
-  background: var(--primary-500);
-  width: 7rem;
-  height: 0.25rem;
-  margin: 0 auto;
-  margin-top: -1rem;
-}
+
 /*
 =============== 
 Navbar
@@ -256,12 +188,10 @@ Navbar
     display: flex;
     justify-content: center;
     align-items: center;
-   /* background: blue; */
 }
 .nav-center{
     width: 90vw;
-    max-width: 1120px;
-   /* background: red; */
+    max-width: var(--max-width);
 }
 
 .nav-header{
@@ -308,12 +238,12 @@ Navbar
     color:#0f172a;
     letter-spacing: 1px;
     padding: 1rem;
-    border-top: 1px solid #64748b;
+    border-top: 1px solid var(--grey-500);
     transition: 0.3s ease-in-out all;
 }
 
 .nav-link:hover{
-    color: #ac1c1c;
+    color: var(--red-dark);
 }
 
 .contact-link a{
@@ -341,7 +271,6 @@ Navbar
         flex-direction: row;
         align-items: left;
         width: 100%;
-        /* background: red;*/
     }
 
     .nav-link{
@@ -364,9 +293,8 @@ Page
 ===============
 */
 .page{
-    /*background: red;*/
     width: 90vw;
-    max-width: 1120px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding-top: 2rem;
     min-height: calc(100vh - (6rem + 4rem) );
@@ -379,8 +307,8 @@ Footer
 */
 .page-footer{
     height: 4rem;
-    background: #222;
-    color: #fff;
+    background: var(--black);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -398,7 +326,7 @@ Hero
     height: 40vh;
     background: url('images/CoverOage.avif') center/cover no-repeat;
     margin-bottom: 2rem;
-    border-radius: 0.25rem;
+    border-radius: var(--borderRadius);
     position: relative;
 }
 
@@ -409,7 +337,7 @@ Hero
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.4);
-    border-radius: 0.25rem;
+    border-radius: var(--borderRadius);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -417,7 +345,7 @@ Hero
 
 .hero-text{
     text-align: center;
-    color: #fff;
+    color: var(--white);
 }
 
 @media screen and(min-width:768px) {
@@ -464,12 +392,12 @@ Recipes
 .tags-list a {
     text-transform: capitalize;
     display: block;
-    color: #64748b;
+    color: var(--grey-500);
     transition: 0.3s ease-in-out all;
 }
 
 .tags-list a:hover{
-    color: #ac1c1c;
+    color: var(--red-dark);
 }
 
 .recipe{
@@ -478,19 +406,19 @@ Recipes
 
 .recipe-img{
     height: 15rem;
-    border-radius: 0.25rem;
+    border-radius: var(--borderRadius);
     margin-bottom: 1rem;
 }
 .recipe h5{
     margin-bottom: 0;
     line-height: 1;
-    color: #ac1c1c;
+    color:var(--red-dark);
 }
 .recipe p{
     margin-bottom: 0;
     line-height: 1;
     margin-top: 0.5rem;
-    color: #64748b;
+    color: var(--grey-500);
     letter-spacing: 1px;
 }
 
@@ -558,7 +486,7 @@ About
     padding-bottom: 3rem;
 }
 .about-img{
-    border-radius: 0.25rem;
+    border-radius: var(--borderRadius);
     height: 300px;
 }
 
@@ -627,7 +555,7 @@ Single Recipe Page
 
 .recipe-icons i {
     font-size: 1.5rem;
-    color: #ac1c1c;
+    color: var(--red-dark);
 }
 
 .recipe-icons h5, 
@@ -670,7 +598,7 @@ Single Recipe Page
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0;
-  color: #ac1c1c;
+  color: var(--red-dark);
 }
 
 .single instruction > p {
