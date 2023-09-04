@@ -396,7 +396,7 @@ Hero
 */
 .hero{
     height: 40vh;
-    background: url('images/coverpg.jpg') center/cover no-repeat;
+    background: url('images/CoverOage.avif') center/cover no-repeat;
     margin-bottom: 2rem;
     border-radius: 0.25rem;
     position: relative;
