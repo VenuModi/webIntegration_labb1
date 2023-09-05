@@ -16,3 +16,14 @@ navBtnDOM.addEventListener('click', () => {
 const date = getElement('#date')
 const currentYear = new Date().getFullYear()
 date.textContent = currentYear
+
+function setupParagraph(){
+    const p1 = document.querySelector("#p1");
+
+    fetch("contact.json")
+    .then((response) => response.json())
+    .then((data) => {
+        p1.textContent = data[0].p1;
+    });
+}
+setupParagraph();

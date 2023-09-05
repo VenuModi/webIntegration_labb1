@@ -10,7 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
   </head>
-  <body>
+  <body onload="setupParagraph()">
     <!-- nav -->
     <nav class="navbar">
       <div class="nav-center">
@@ -52,15 +52,10 @@
             taste what you have to offer. Let's spread the love for food
             together.
           </p>
-          <p>
-            Fill out your name, email & message below, and our team will review
-            your submission. If your recipe is a perfect fit for our platform,
-            we'll proudly feature it on Recipes. We can't wait to see what your
-            bring to the table!
-          </p>
+          <p id="p1"></p>
         </article>
         <article>
-          <form class="form contact-form">
+          <form class="form contact-form" id="contact-form">
             <div class="form-row">
               <label html="name" class="form-label">your name</label>
               <input type="text" name="name" id="name" class="form-input" />
