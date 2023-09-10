@@ -546,7 +546,7 @@ Single Recipe Page
 
 .recipe-icons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin: 2rem 0;
     text-align: center;
@@ -620,7 +620,23 @@ Single Recipe Page
   color: var(--grey-700);
 }
 
+/*
+=============== 
+Favorite Button
+===============
+*/
+/*.favorite-btn {
+  display: flex;
+  cursor: pointer;
+}*/
 
+.favorite-btn i {
+  font-size: 1.5rem;
+  color: var(--grey-500);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
 
-
-
+.favorite-btn.favorited i {
+  color: var(--red-dark);
+}
