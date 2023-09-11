@@ -31,6 +31,48 @@ function setupParagraph() {
 }
 setupParagraph();
 
+
+//Validation
+function validateForm() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  if (name.length < 2) {
+    alert('Name must be at least 2 characters long.');
+    return false;
+  }
+  if(containsSpecialCharacters(name)){
+    alert('Name cannot contain special characters.')
+    return false;
+  }
+
+  if (!isValidEmail(email)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+
+  if (message.length < 10) {
+    alert('Message must be at least 10 characters long.');
+    return false;
+  }
+
+  alert('submitted!')
+  return true;
+}
+
+function containsSpecialCharacters(inputString){
+  const specialCharacterRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+  return specialCharacterRegex.test(inputString);
+}
+
+function isValidEmail(email) {
+ 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+
 // Favorite Button
 document.addEventListener('DOMContentLoaded', function () {
   const favoriteButtons = document.querySelectorAll('.favorite-btn');
@@ -60,3 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+
